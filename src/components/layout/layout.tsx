@@ -98,7 +98,7 @@ export const Layout = function () {
         const newCell = Math.random() > 0.5 ? CellStatus.Live : CellStatus.Dead;
         let newCells = [...cells, newCell];
 
-        checkConditions(newCells);
+        newCells = checkConditions(newCells);
 
         setCells(newCells);
     }
